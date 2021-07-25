@@ -7,17 +7,11 @@
     android:elevation="10dp"
     android:layout_margin="5dp"
     app:cardCornerRadius="10dp">
-
-    <LinearLayout
+    <ImageView
+        android:id="@+id/mImageView"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:layout_height="170dp"
+        android:scaleType="fitXY"
+       />
 
-        <ImageView
-            android:id="@+id/imageView"
-            android:layout_width="match_parent"
-            android:layout_height="200dp"
-            android:scaleType="fitXY"
-            tools:srcCompat="@tools:sample/avatars" />
-    </LinearLayout>
 </androidx.cardview.widget.CardView>
