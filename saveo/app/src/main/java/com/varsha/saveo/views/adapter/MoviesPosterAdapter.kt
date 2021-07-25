@@ -9,8 +9,9 @@ import com.varsha.saveo.R
 import com.varsha.saveo.data.model.MoviesShowItem
 import com.varsha.saveo.views.ItemClickListener
 import kotlinx.android.synthetic.main.movie_item_list.view.*
+import kotlinx.android.synthetic.main.poster_layout.view.*
 
-class MoviesShowAdapter(var moviesShows: List<MoviesShowItem>, val listener:ItemClickListener) : RecyclerView.Adapter<MoviesShowAdapter.MoviesViewHolder>() {
+class MoviesPosterAdapter(var moviesShows: List<MoviesShowItem>,val listener : ItemClickListener) : RecyclerView.Adapter<MoviesPosterAdapter.MoviesViewHolder>() {
 
     inner class MoviesViewHolder(itemView: View) :
         RecyclerView.ViewHolder(itemView)
@@ -18,7 +19,7 @@ class MoviesShowAdapter(var moviesShows: List<MoviesShowItem>, val listener:Item
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MoviesViewHolder {
         val view = LayoutInflater.from(parent.context).
-        inflate(R.layout.movie_item_list, parent, false)
+        inflate(R.layout.poster_layout, parent, false)
         return MoviesViewHolder(view)
     }
 
@@ -27,8 +28,9 @@ class MoviesShowAdapter(var moviesShows: List<MoviesShowItem>, val listener:Item
         holder.itemView.setOnClickListener {
             listener.onItemClicked(currentMoviesShow.id)
         }
+
         holder.itemView.apply {
-            Glide.with(context).load(currentMoviesShow.image.original).into(mImageView)
+            Glide.with(context).load(currentMoviesShow.image.original).into(mPosterImage)
         }
     }
 

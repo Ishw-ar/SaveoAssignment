@@ -10,5 +10,6 @@
     <color name="colorDarkBlue">#272C4F</color>
     <color name="colorDarkBlue2">#42456f</color>
     <color name="colorDarkBlue3">#565A7B</color>
+    <color name="colorPrimaryDark">#212441</color>
 
 </resources>

@@ -4,6 +4,7 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.liveData
 import com.varsha.saveo.data.model.MoviesShowResponse
+import com.varsha.saveo.data.model.moviedetails.ShowDetailsResponse
 import com.varsha.saveo.repository.MoviesShowRepository
 import kotlinx.coroutines.Dispatchers
 
@@ -17,6 +18,13 @@ class MoviesShowViewModel : ViewModel() {
         }
 
 
+    }
+    fun getShowDetails(id: Int): LiveData<ShowDetailsResponse> {
+
+        return liveData(Dispatchers.IO) {
+            val result = moviesShowRepository.getShowDetails(id)
+            emit(result.data!!)
+        }
     }
 
 
