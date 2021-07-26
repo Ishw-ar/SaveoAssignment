@@ -50,21 +50,21 @@ class ShowDetailsActivity : AppCompatActivity() {
 
         })
     }
-    /**
-     * A function for statusBar color.
-     */
+
+     //A function for statusBar color.
+
     private fun statusBarColor() {
         if (Build.VERSION.SDK_INT >= 23) {
             val window = this.window
             window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS)
             window.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS)
-            window.statusBarColor = this.resources.getColor(R.color.colorPrimaryDark)
+            window.statusBarColor = this.resources.getColor(R.color.colorPrimary)
             getWindow().decorView.systemUiVisibility = View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR
         }
     }
-    /**
-     * A function for actionBar Setup.
-     */
+
+     // A function for actionBar Setup.
+
     private fun setupActionBar() {
         setSupportActionBar(toolbar_item_details_activity)
         val actionBar = supportActionBar

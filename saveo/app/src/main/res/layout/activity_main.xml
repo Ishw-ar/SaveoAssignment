@@ -29,7 +29,7 @@
                     android:layout_weight="1.8"
                     android:textStyle="bold"
                     android:gravity="center_vertical|center_horizontal"
-                    android:text="Movie"
+                    android:text="Movies"
                     android:textColor="@color/white"
                     android:textSize="18sp" />
                 <ImageView
