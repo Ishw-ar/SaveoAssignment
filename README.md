@@ -1,4 +1,4 @@
-# Record App (MVVM + Api + RecyclerView ) 📱
+# Movie App (MVVM + Api + RecyclerView ) 📱
 
 # Problem statement
 Develop an android app with a movie list and show movie detail when click as shown in
